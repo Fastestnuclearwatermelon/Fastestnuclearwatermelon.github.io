@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.frst{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;    
+}
+
+.anim_circle{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+    border: none;
+    background-color: rgb(228, 18, 116);
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate-reverse;
+}
+
+.anim_circle:hover{
+    animation-play-state: paused;
+}
+
+@keyframes circle{
+    0%{
+        top: 70%;
+    }
+    25%{
+        transform: rotate(90deg);    
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        top:0%;
+        background-color: rgb(229, 255, 0);
+        transform:rotate(360deg);
+        /*transform: matrix(2, 0.6, 3, 3, 1.2, 0.7)*/
+    }
+}
+
+.comp_anim{
+    height: 100vh;
+    width: 100%;
+    position:relative;
+}
+
+.ball_anim{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: rgb(13, 131, 241);
+    border-radius: 30%;
+    border: none;
+    opacity: 0;
+
+    animation-name: ball;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+}
+
+@keyframes ball{
+    0%{
+        opacity: 20%;
+        top:25%;
+        left:50%;
+    }
+    15%{
+        opacity:100%;
+    }
+    20%{
+        top:20%;
+        left:40%;
+    }
+    40%{
+        top: 75%;
+        left: 50%;
+        transform: scale(0.7, 0.7);
+    }
+    60%{
+        top: 50%;
+        left: 35%;
+        transform: scale(0.5, 0.5);
+    }
+    80%{
+        top: 50%;
+        left: 50%;
+        transform: scale(0.3, 0.3);
+    }
+    85%{
+        top: 50%;
+        left: 50%;
+        opacity: 80%;
+        transform: scale(0.3, 0.3);
+    }
+    93%{
+        left: 50%;
+        opacity: 50%;
+        transform: scale(0.3, 0.3);
+    }
+    100%{
+        top: 25%;
+        left: 50%;
+        opacity: 0%;
+        transform: scale(0.15, 0.15);
+    }
+}
+.square{
+    height: 100vh;
+    width: 100%;
+    position:relative;
+}
+
+.third{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(26, 14, 59);
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+}
